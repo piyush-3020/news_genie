@@ -116,4 +116,87 @@ a {
   justify-content: flex-end;
   align-items: center;
   padding: 20px;
+  height: 20px;
+  width: 100px;
+}
+.front{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color:#f4f5f5;
+}
+
+.logo {
+  left: 20px;
+}
+
+img{
+  height: auto;
+  width: 150px;
+  object-fit: contain;
+}
+
+#google {
+  height: 25px;
+  width: 190px;
+  overflow: hidden;
+}
+
+#glowing-div {
+  padding-left: 5px;
+  width: 200px;
+  height: 25px;
+  overflow: hidden;
+  background-color: #1e90ff; /* Blue background */
+  border-radius: 8px; /* Rounded corners (optional) */
+  box-shadow: 0 0 20px rgba(30, 144, 255, 0.5); /* Blue glow */
+  transition: box-shadow 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Glow intensifies on hover */
+#glowing-div:hover {
+  box-shadow: 0 0 40px rgba(30, 144, 255, 0.8), 
+              0 0 80px rgba(30, 144, 255, 0.5); /* Brighter glow */
+  transform: scale(1.05); /* Slight enlargement */
+}
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  background-color: #4CAF50; /* Green background for the sign-in button */
+  border-radius: 5px;
+}
+
+.auth-container .sign-in-button {
+  color: white; /* White text color */
+  font-size: 18px;
+  padding: 10px 24px;
+  background-color: #4CAF50; /* Matching the container color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.auth-container .sign-in-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+  transform: scale(1.05); /* Slight enlargement */
+}
+
+.user-button {
+  background-color: #ff9800; /* Orange background */
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.user-button:hover {
+  background-color: #f57c00; /* Darker orange on hover */
+  transform: scale(1.05); /* Slight enlargement */
 }

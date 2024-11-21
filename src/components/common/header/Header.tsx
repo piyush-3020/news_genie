@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Head from "./Head";
 import "./header.css";  // Ensure the CSS is in the correct location
 import { Link } from "react-router-dom";
 
@@ -8,7 +7,6 @@ const Header = () => {
 
   return (
     <>
-      <Head />
       <header>
         <div className="container paddingSmall">
           <nav>
@@ -20,22 +18,31 @@ const Header = () => {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/culture">Culture</Link>
+                <Link to="/culture">Business</Link>
               </li>
               <li>
                 <Link to="/politics">Politics</Link>
               </li>
               <li>
-                <Link to="/memes">Memes</Link>
+                <Link to="/memes">Sports</Link>
               </li>
               <li>
-                <Link to="/sports">Sports</Link>
+                <Link to="/sports">Entertainment</Link>
               </li>
               <li>
-                <Link to="/boxed">Boxed</Link>
+                <Link to="/boxed">Technology</Link>
               </li>
               <li>
-                <Link to="/reviews">Reviews</Link>
+                <Link to="/reviews">Science</Link>
+              </li>
+              <li>
+                <Link to="/reviews">Health</Link>
+              </li>
+              <li>
+                <Link to="/reviews">Education</Link>
+              </li>
+              <li>
+                <Link to="/reviews">Global</Link>
               </li>
             </ul>
             <button className="barIcon" onClick={() => setNavbar(!navbar)}>

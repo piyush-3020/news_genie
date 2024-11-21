@@ -57,10 +57,8 @@ const Footer = () => {
       </footer>
       <div className="legal">
         <div className="container flexSB">
-          <p>© all rights reserved</p>
-          <p>
-            made with <i className="fa fa-heart"></i> by gorkhcoder
-          </p>
+          <p>Newsgenie © 2024 all rights reserved</p>
+          
         </div>
       </div>
     </>
