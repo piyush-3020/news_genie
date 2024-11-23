@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+    background-color: #f4f4f4;
+  }
+  
+  .comments-section {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    width: 450px;
+    height: 150px;
+  }
+  
+  .toggle-comments-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .comments-wrapper {
+    margin-top: 10px;
+  }
+  
+  .comment-breakdown {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  .comment-breakdown span {
+    font-size: 1.2rem;
+  }
+  
+  .comments-container {
+    margin-bottom: 10px;
+  }
+  
+  .comment {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+  
+  .comment-text {
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 4px;
+    max-width: 500px;
+  }
+  
+  .add-comment {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .add-comment input, .add-comment select {
+    flex: 1;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+  }
+  
+  .add-comment button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .add-comment button:hover {
+    background-color: #218838;
+  }
+  
+  .add-comment button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+
+  /* Style the scrollbar */
+::-webkit-scrollbar {
+    width: 5px; /* Width of the scrollbar */
+     /* Height of the scrollbar (for horizontal scroll) */
+  }
+  
+  /* Style the track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background color of the track */
+  }
+  
+  /* Style the thumb */
+  ::-webkit-scrollbar-thumb {
+    background: #800b0b; /* Color of the scrollbar handle */
+    border-radius: 6px; /* Rounded edges */
+  }
+  
+  /* Hover effect for the thumb */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #582525; /* Darker shade on hover */
+  }
+
+.btn {
+  font-size: 1.5rem;
+}
+  
+  
