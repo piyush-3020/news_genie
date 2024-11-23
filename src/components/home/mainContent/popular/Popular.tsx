@@ -7,6 +7,9 @@ import "slick-carousel/slick/slick-theme.css"
 import { popular } from "../../../../dummyData"
 import Heading from "../../../common/heading/Heading"
 
+const data= await popular("popular");
+
+
 const Popular = () => {
   const settings = {
     className: "center",
@@ -34,27 +37,27 @@ const Popular = () => {
         <Heading title='Popular' />
         <div className='content'>
           <Slider {...settings}>
-            {popular.map((val) => {
+            {data.data.results.map((val: { cover: string | undefined; catgeory: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | null | undefined; title: string | any[]; date: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | null | undefined; comments: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | null | undefined },index) => {
               return (
-                <div className='items'>
+                <div className='items' key={index}>
                   <div className='box shadow'>
                     <div className='images row'>
                       <div className='img'>
-                        <img src={val.cover} alt='' />
+                        <img src={val?.image_url} alt='' />
                       </div>
-                      <div class='category category1'>
-                        <span>{val.catgeory}</span>
+                      <div className='category category1'>
+                        <span>{val?.source_name}</span>
                       </div>
                     </div>
                     <div className='text row'>
                       <h1 className='title'>{val.title.slice(0, 40)}...</h1>
                       <div className='date'>
-                        <i class='fas fa-calendar-days'></i>
-                        <label>{val.date}</label>
+                        <i className='fas fa-calendar-days'></i>
+                        <label>{val?.pubDate?.split(" ")[0]}</label>
                       </div>
                       <div className='comment'>
-                        <i class='fas fa-comments'></i>
-                        <label>{val.comments}</label>
+                        <i className='fa fa-info '></i>
+                        <a target="_blank" rel="noopener noreferrer" href={val?.link} >Read More</a>
                       </div>
                     </div>
                   </div>

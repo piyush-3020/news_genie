@@ -5,11 +5,14 @@ import Heading from "../../../common/heading/Heading"
 import { gallery } from "../../../../dummyData"
 import Tpost from "../Tpost/Tpost"
 import SocialMedia from "../social/SocialMedia"
+import { useNavigate } from "react-router-dom"
 
 //const allCat = [...new Set(popular.map((curEle) => curEle.catgeory))]
 //console.log(allCat)
 
+
 const Side = () => {
+  const navigate=useNavigate();
   const settings = {
     dots: false,
     infinite: true,
@@ -18,7 +21,7 @@ const Side = () => {
     slidesToScroll: 1,
   }
 
-  const catgeory = ["world", "travel", "sport", "fun", "health", "fashion", "business", "technology"]
+  const catgeory = ["Business", "Politics", "Sports", "Fun", "Technology", "Science", "Health", "Education"]
   return (
     <>
       <Heading title='Stay Connected' />
@@ -47,7 +50,7 @@ const Side = () => {
         {/*<div className='items'>{allCat}</div>*/}
         {catgeory.map((val) => {
           return (
-            <div className='category category1'>
+            <div className='category category1' onClick={()=>navigate(`/${val}`)}>
               <span>{val}</span>
             </div>
           )
