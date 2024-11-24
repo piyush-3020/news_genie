@@ -137,12 +137,6 @@ img{
   object-fit: contain;
 }
 
-#google {
-  height: 25px;
-  width: 190px;
-  overflow: hidden;
-}
-
 #glowing-div {
   padding-left: 5px;
   width: 200px;
@@ -152,6 +146,13 @@ img{
   border-radius: 8px; /* Rounded corners (optional) */
   box-shadow: 0 0 20px rgba(30, 144, 255, 0.5); /* Blue glow */
   transition: box-shadow 0.3s ease-in-out; /* Smooth transition */
+}
+
+#glowing-div p {
+  font-size: 1.1rem;
+  color: wheat;
+  margin-left: 12px;
+  position: absolute;
 }
 
 /* Glow intensifies on hover */
@@ -200,3 +201,24 @@ img{
   background-color: #f57c00; /* Darker orange on hover */
   transform: scale(1.05); /* Slight enlargement */
 }
+
+.logo {
+  cursor: pointer;
+}
+
+.logo.animate {
+  animation: clickAnimation 0.2s ease-in-out;
+}
+
+@keyframes clickAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+

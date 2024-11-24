@@ -22,11 +22,6 @@
     0 0 15px rgba(198, 191, 191, 0.5);
 }
 
-.date-text:hover {
-  text-shadow: 0 0 20px rgb(225, 122, 129), 0 0 30px rgba(209, 134, 146, 0.8),
-    0 0 40px rgba(211, 138, 138, 0.6);
-}
-
 .location-text {
   color: #007acc;
   font-size: 16px;

@@ -1,12 +1,13 @@
 import React from "react"
 import Slider from "react-slick"
-import { lifestyle,  } from "../../../../dummyData"
+import { popular } from "../../../../dummyData"
 import Heading from "../../../common/heading/Heading"
 
 import "../Ppost/ppost.css"
 //copy ppost code
 
-const data= await lifestyle("lifestyle");
+const data= "";
+//console.log(data.data.articles)
 
 
 const Life = () => {
@@ -32,23 +33,23 @@ const Life = () => {
         <Heading title='Life Style' />
         <div className='content'>
           <Slider {...settings}>
-            {data?.data?.results.map((val: { cover: string | undefined; catgeory: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | null | undefined; title: string | any[]; date: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | null | undefined }) => {
+            {data?.data?.articles?.map((val: { cover: string | undefined; catgeory: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | null | undefined; title: string | any[]; date: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | null | undefined }) => {
               return (
                 <div className='items'>
                   <div className='box shadow'>
                     <div className='images'>
                       <div className='img'>
-                        <img src={val?.image_url} alt='' />
+                        <img src={val?.urlToImage} alt='' />
                       </div>
                       <div className='category category1'>
-                        <span>{val?.source_name}</span>
+                        <span>{val?.source?.name}</span>
                       </div>
                     </div>
-                    <div className='text' onClick={()=>window.open(val?.link, "_blank")} >
+                    <div className='text' onClick={()=>window.open(val?.url, "_blank")} >
                       <h1 className='title'>{val?.title?.slice(0, 40)}...</h1>
                       <div className='date'>
                         <i className='fas fa-calendar-days'></i>
-                        <label>{val?.pubDate?.split(" ")[0]}</label>
+                        <label>{val?.publishedAt?.split("T")[0]}</label>
                       </div>
                     </div>
                   </div>

@@ -1,64 +1,76 @@
-
 import "./footer.css";
 
 const Footer = () => {
   return (
     <>
       <footer>
-        <div className="container">
-          <div className="box logo">
-            <img src="../images/tech-logo-footer.png" alt="Tech Logo Footer" />
-            <p>Busan is an amazing magazine Blogger theme that is easy to customize for your needs</p>
-            <i className="fa fa-envelope"></i>
-            <span> hello@beautiful.com </span> <br />
-            <i className="fa fa-headphones"></i>
-            <span> +91 60521488</span>
+        <div className="container flexSB">
+          {/* About Section */}
+          <div className="footer-section">
+            <h3>About Newsgenie</h3>
+            <p>
+            Newsgenie is an AI-powered news platform that provides real-time, personalized news updates. With cutting-edge technology, it offers automatic news summarization and sentiment analysis on user comments, ensuring a smarter and more engaging reading experience.
+            </p>
           </div>
-          <div className="box">
-            <h3>SPORT</h3>
-            <div className="item">
-              <img src="../images/hero/hero1.jpg" alt="Sport Image 1" />
-              <p>Google To Boost Android Security In Few Days</p>
-            </div>
-            <div className="item">
-              <img src="../images/hero/hero2.jpg" alt="Sport Image 2" />
-              <p>Cespedes play the winning Baseball Game</p>
-            </div>
-          </div>
-          <div className="box">
-            <h3>CRICKET</h3>
-            <div className="item">
-              <img src="../images/hero/hero3.jpg" alt="Cricket Image 1" />
-              <p>US Promises to give Intel aid to locate the soldiers</p>
-            </div>
-            <div className="item">
-              <img src="../images/hero/hero1.jpg" alt="Cricket Image 2" />
-              <p>Renewable energy dead as industry waits for Policy</p>
-            </div>
-          </div>
-          <div className="box">
-            <h3>LABELS</h3>
+
+          {/* Quick Links */}
+          <div className="footer-section">
+            <h3>Quick Links</h3>
             <ul>
               <li>
-                <span>Boxing</span> <label>(5)</label>
+                <a href="/">Home</a>
               </li>
               <li>
-                <span>Fashion</span> <label>(6)</label>
+                <a href="/about">About Us</a>
               </li>
               <li>
-                <span>Health</span> <label>(7)</label>
+                <a href="/contact">Contact</a>
               </li>
               <li>
-                <span>Nature</span> <label>(9)</label>
+                <a href="/privacy-policy">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Social Media Links */}
+          <div className="footer-section">
+            <h3>Follow Us</h3>
+            <div className="social-icons">
+              <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
+                <i className="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://www.twitter.com" target="_blank" rel="noreferrer">
+                <i className="fab fa-twitter"></i>
+              </a>
+              <a href="https://www.instagram.com" target="_blank" rel="noreferrer">
+                <i className="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
+                <i className="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+          <div className="contributors">
+            <h3>Designed by:</h3>
+            <ul>
+              <li>
+                John Doe - <a href="mailto:john.doe@example.com">john.doe@example.com</a>
+              </li>
+              <li>
+                Jane Smith - <a href="mailto:jane.smith@example.com">jane.smith@example.com</a>
+              </li>
+              <li>
+                Alex Brown - <a href="mailto:alex.brown@example.com">alex.brown@example.com</a>
               </li>
             </ul>
           </div>
         </div>
       </footer>
+
+      {/* Legal Section */}
       <div className="legal">
         <div className="container flexSB">
-          <p>Newsgenie © 2024 all rights reserved</p>
-          
+          <p>Newsgenie © 2024 All Rights Reserved</p>
         </div>
       </div>
     </>

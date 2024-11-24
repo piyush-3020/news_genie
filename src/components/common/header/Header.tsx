@@ -8,6 +8,7 @@ const Header = () => {
   return (
     <>
       <header>
+      
         <div className="container paddingSmall">
           <nav>
             <ul
@@ -42,7 +43,7 @@ const Header = () => {
                 <Link to="/Education">Education</Link>
               </li>
               <li>
-                <Link to="/Global">Global</Link>
+                <Link to="Local">Local</Link>
               </li>
             </ul>
             <button className="barIcon" onClick={() => setNavbar(!navbar)}>

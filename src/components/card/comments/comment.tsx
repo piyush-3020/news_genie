@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useUser } from '@clerk/clerk-react'; // Import Clerk's user hook
 import './comment.css';
 
 type Comment = {
@@ -9,6 +10,7 @@ type Comment = {
 };
 
 const Comments: React.FC = () => {
+  const { user } = useUser(); // Get user details from Clerk
   const [comments, setComments] = useState<Comment[]>([]);
   const [happyCount, setHappyCount] = useState(0);
   const [sadCount, setSadCount] = useState(0);
@@ -36,11 +38,12 @@ const Comments: React.FC = () => {
     if (!commentText.trim()) return;
 
     const sentiment = await querySentiment(commentText);
+
     const newComment: Comment = {
       text: commentText,
-      author: 'Anonymous',
+      author: user?.fullName || 'Anonymous', // Use Clerk's fullName or fallback
       date: new Date().toLocaleString(),
-      profilePic: 'https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y',
+      profilePic: user?.imageUrl || 'https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y', // Use Clerk's profile image or fallback
     };
 
     setComments((prev) => [...prev, newComment]);

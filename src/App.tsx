@@ -11,6 +11,14 @@ import {
   SignInButton,
   UserButton,
 } from "@clerk/clerk-react";
+import Politics from "./components/culture/Politics.js";
+import Sports from "./components/culture/Sports.js";
+import Entertainment from "./components/culture/Entertainment.js";
+import Science from "./components/culture/Science.js";
+import Technology from "./components/culture/Technology.js";
+import Education from "./components/culture/Education.js";
+import Global from "./components/culture/Global.js";
+import Health from "./components/culture/Health.js";
 
 const handleReadMore = () => {
 
@@ -25,9 +33,9 @@ const App = () => {
           <div className="logo">
             <img src="/src/logo1.png" alt="" />
           </div>
-          <div id="glowing-div">
+          
           <div id="google_element"></div>
-          </div>
+          
           <div className="user-info">
           <SignedOut>
           <div className="auth-container">
@@ -41,13 +49,60 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Homepages />} />
             <Route path="/singlepage/:id" element={<SinglePage />} />
-            <Route path="/newscard" element={<NewsCard
-        imageUrl="https://via.placeholder.com/150"
-        title="Breaking News: React and TypeScript"
-        description="React and TypeScript are a powerful combination for modern web development.Dailyhunt, earlier called Newshunt, was created as a Symbian app in 2009 by two ex-Nokia employees Umesh Kulkarni and Chandrashekhar Sohoni. Later in 2011, Newshunt became available on the Android platform. It was by that time that Virendra Gupta, founder of Verse acquired the application.Virendra Gupta, better known as Viru, had started Verse in 2007 as a value-added service (VAS) company.[2] In 2011."
-        Source="Hindustan Times"
-        onReadMore={handleReadMore} // Required function
-      />} />
+            <Route
+            path="/newscard"
+            element={
+             <NewsCard/>
+            }
+          />
+           <Route
+            path="/Politics"
+            element={
+              <Politics/>
+            }
+          />
+           <Route
+            path="/Sports"
+            element={
+             <Sports/>
+            }
+          />
+           <Route
+            path="/Entertainment"
+            element={
+             <Entertainment/>
+            }
+          />
+          <Route
+            path="/Science"
+            element={
+            <Science/>
+            }
+          />
+          <Route
+            path="/Technology"
+            element={
+             <Technology/>
+            }
+          />
+          <Route
+            path="/Education"
+            element={
+            <Education/>
+            }
+          />
+          <Route
+            path="/Local"
+            element={
+             <Global/>
+            }
+          />
+          <Route
+            path="/Health"
+            element={
+             <Health/>
+            }
+          />
           </Routes>
         <Footer />
       </Router>

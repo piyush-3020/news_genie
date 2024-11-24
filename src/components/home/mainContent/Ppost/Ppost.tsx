@@ -1,12 +1,12 @@
 import React from "react"
 import Slider from "react-slick"
-import { popular, ppost } from "../../../../dummyData"
+import { lifestyle, popular, ppost } from "../../../../dummyData"
 import Heading from "../../../common/heading/Heading"
 import "./ppost.css"
 
 // copy same code of popular
 
-const data= await popular("top");
+const data= "";
 const Ppost = () => {
   const settings = {
     dots: false,
@@ -18,26 +18,26 @@ const Ppost = () => {
   return (
     <>
       <section className='popularPost'>
-        <Heading title='Popular Posts' />
+        <Heading title='Games' />
         <div className='content'>
           <Slider {...settings}>
-            {data?.data?.results.map((val) => {
+            {data?.data?.articles?.map((val) => {
               return (
                 <div className='items'>
                   <div className='box shadow'>
                     <div className='images'>
                       <div className='img'>
-                        <img src={val?.image_url} alt='' />
+                        <img src={val?.urlToImage} alt='' />
                       </div>
                       <div className='category category1'>
-                        <span>{val?.source_name}</span>
+                        <span>{val?.source?.name}</span>
                       </div>
                     </div>
-                    <div className='text' onClick={()=>window.open(val?.link, "_blank")}>
+                    <div className='text' onClick={()=>window.open(val?.url, "_blank")}>
                       <h1 className='title'>{val?.title?.slice(0, 40)}...</h1>
                       <div className='date'>
                         <i className='fas fa-calendar-days'></i>
-                        <label>{val?.pubDate?.split(" ")[0]}</label>
+                        <label>{val?.publishedAt?.split("T")[0]}</label>
                       </div>
                     </div>
                   </div>

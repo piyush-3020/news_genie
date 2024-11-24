@@ -39,14 +39,10 @@ const Side = () => {
         </form>
       </section>
 
-      <section className='banner'>
-        <img src='./images/sidebar-banner-new.jpg' alt='' />
-      </section>
-
       <Tpost />
 
       <section className='catgorys'>
-        <Heading title='Catgeorys' />
+        <Heading title='Categories' />
         {/*<div className='items'>{allCat}</div>*/}
         {catgeory.map((val) => {
           return (
@@ -58,17 +54,16 @@ const Side = () => {
       </section>
 
       <section className='gallery'>
-        <Heading title='Gallery' />
-        <Slider {...settings}>
-          {gallery.map((val) => {
-            return (
-              <div className='img'>
-                <img src={val.cover} alt='' />
-              </div>
-            )
-          })}
-        </Slider>
-      </section>
+  <Heading title='Gallery' />
+  <div className='gallery-column'>
+    {gallery.map((val, index) => (
+      <div className='img' key={index}>
+        <img src={val.cover} alt={`Gallery Image ${index + 1}`} />
+      </div>
+    ))}
+  </div>
+</section>
+
     </>
   )
 }

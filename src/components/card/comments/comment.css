@@ -48,6 +48,12 @@ body {
     align-items: flex-start;
     margin-bottom: 10px;
   }
+
+  .comment img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+  }
   
   .comment-text {
     background-color: #f1f1f1;

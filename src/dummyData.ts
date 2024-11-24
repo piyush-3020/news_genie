@@ -187,13 +187,21 @@ export const world = [
   },
 ]
 
-export const popular = async (query)=>{
-  const url=`https://newsdata.io/api/1/latest?apikey=pub_600841437cb7b15dc5f42231d22e02d75090f&country=in&q=${query}&language=en`
+const keyy = import.meta.env.VITE_API_KEYY;
+const keyy2 = import.meta.env.VITE_API_KEYY2;
+
+export const popular = async (query: string)=>{
+  const url=`https://newsapi.org/v2/everything?q=${query}&apiKey=${keyy}&pageSize=20`
   const populardata=await axios.get(url);
 
   return populardata;
-   
-  
+}
+
+export const lifestyle = async (query: string)=>{
+  const url=`https://newsapi.org/v2/everything?q=${query}&apiKey=${keyy2}&pageSize=20`
+  const lifestyledata=await axios.get(url);
+
+  return lifestyledata;
 }
 
 export const ppost = [
@@ -226,31 +234,23 @@ export const ppost = [
     cover: "../images/ppost/pop4.jpg",
   },
 ]
-export const lifestyle = async (query: string)=>{
-  const url=`https://newsdata.io/api/1/latest?apikey=pub_600841437cb7b15dc5f42231d22e02d75090f&country=in&category=${query}&language=en`
-  const lifestyledata=await axios.get(url);
-
-  return lifestyledata;
-   
-  
-}
 
  
 export const tpost = [
   {
     id: 1,
-    title: "US Promises to give Intel aid to locate the soldiers",
-    cover: "../images/tpost/tpost.webp",
+    title: "Mercedes-AMG C 63 S E-Performance",
+    cover: "https://www.carandbike.com/_next/image?url=https%3A%2F%2Fimages.carandbike.com%2Fcms%2Farticles%2F2024%2F11%2F3205535%2FNew_Launches_and_debuts_November_2024_e28e06e1d0.jpg&w=1080&q=75",
   },
   {
     id: 2,
-    title: "Renewable energy dead as industry waits for Policy",
-    cover: "../images/tpost/tpost2.jpg",
+    title: "China’s Xiaomi, Geely Unveil Self-Driving EV Models to Challenge Tesla",
+    cover: "https://autotech.news/wp-content/uploads/2024/11/Xiaomi-SU7-cockpit-interieor-1920x1163.webp",
   },
   {
     id: 3,
-    title: "Mount Etna erupts fashion in nice looking pictures",
-    cover: "../images/tpost/tpost3.jpg",
+    title: "Model Planning Review in 2025: SUVs and hybrid dominate the new lineup",
+    cover: "https://autotech.news/wp-content/uploads/2024/11/Polestar_4-768x432.webp",
   },
 ]
 export const gallery = [
@@ -258,16 +258,16 @@ export const gallery = [
     cover: "../images/gallery/g1.jpg",
   },
   {
-    cover: "../images/gallery/g2.jpg",
+    cover: "https://images.unsplash.com/photo-1731902062633-1496d7bcf95c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0fHx8ZW58MHx8fHx8",
   },
   {
-    cover: "../images/gallery/g3.jpg",
+    cover: "https://images.unsplash.com/photo-1732332411020-ce8d1d88f251?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
-    cover: "../images/gallery/g4.jpg",
+    cover: "https://plus.unsplash.com/premium_photo-1732283132754-daee0ffcad4b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyNHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
-    cover: "../images/gallery/g5.jpg",
+    cover: "https://images.unsplash.com/photo-1674637675504-7d1035e0508d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0MHx8fGVufDB8fHx8fA%3D%3D",
   },
 ]
 export const discover = [
@@ -292,7 +292,7 @@ export const discover = [
     cover: "../images/discover/d5.jpg",
   },
   {
-    title: "nitendo",
+    title: "nintendo",
     cover: "../images/discover/d6.jpg",
   },
 ]

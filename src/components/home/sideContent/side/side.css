@@ -60,6 +60,7 @@
 .gallery .img {
   width: 315px;
   height: 200px;
+  margin: 1px;
 }
 .gallery img {
   width: 315px;

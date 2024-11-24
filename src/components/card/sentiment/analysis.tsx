@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Doughnut } from "react-chartjs-2";
 import {
     Chart as ChartJS,
@@ -35,15 +35,50 @@ const percentagePlugin = {
     },
 };
 
-const SentimentChart: React.FC = () => {
+// Define the prop type for the SentimentChart component
+interface SentimentChartProps {
+    description: string; // The news description passed as a prop
+}
+
+const SentimentChart: React.FC<SentimentChartProps> = ({ description }) => {
+    const [sentimentScores, setSentimentScores] = useState([0, 0, 0]); // Default to [positive, negative, neutral]
+    const towken = import.meta.env.VITE_ACCESS_CODE2;
+
+    // Example function to fetch sentiment data
+    const analyzeSentiment = async (text: string) => {
+        const response = await fetch("https://api-inference.huggingface.co/models/Cloudy1225/stackoverflow-roberta-base-sentiment", {
+            method: "POST",
+            headers: {
+                Authorization: `Bearer ${towken}`, // Use your secure API key here
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ inputs: text }),
+        });
+
+        const result = await response.json();
+        const scoresArray = ['positive', 'negative', 'neutral'].map(label =>
+            result[0].find((item: any) => item.label === label)?.score * 100 || 0 // Default to 0 if missing
+        );
+        
+        setSentimentScores(scoresArray); // Update state with sentiment scores
+    };
+
+    // Analyze sentiment whenever description prop changes
+    useEffect(() => {
+        if (description) {
+            analyzeSentiment(description);
+        }
+    }, [description]); // Dependency array ensures effect runs when description changes
+
+    // Chart data
     const data: ChartData<"doughnut"> = {
-        labels: ["Positive", "Negative", "Neutral"], // Labels for legend
+        labels: ["Positive", "Negative", "Neutral"],
         datasets: [
             {
                 label: "Sentiment Analysis",
-                data: [60, 20, 20], // Sentiment percentages
-                backgroundColor: ["rgb(1, 178, 96)", "rgb(230, 80, 91)", "rgb(246, 138, 4)"], // Colors for each sentiment
-                borderColor: ["#fff", "#fff", "#fff"], // Borders around segments
+                data: sentimentScores, // Dynamic sentiment data
+                backgroundColor: ["rgb(1, 178, 96)", "rgb(230, 80, 91)", "rgb(246, 138, 4)"],
+                borderColor: ["#fff", "#fff", "#fff"],
                 borderWidth: 2,
             },
         ],
@@ -53,7 +88,7 @@ const SentimentChart: React.FC = () => {
         responsive: true,
         plugins: {
             legend: {
-                display: true, // Disable the legend (hides labels above chart)
+                display: true,
             },
             tooltip: {
                 callbacks: {
@@ -65,9 +100,9 @@ const SentimentChart: React.FC = () => {
                 },
             },
         },
-        cutout: "50%", // Creates the hole for the donut chart
-        rotation: -90, // Start angle for half-doughnut
-        circumference: 180, // Display only half of the chart
+        cutout: "50%", 
+        rotation: -90, 
+        circumference: 180, 
     };
 
     return (
