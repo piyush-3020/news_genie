@@ -23,7 +23,7 @@ const OneCard = () => {
         <div className="par21">
           <div className="news-card__content">
             <h2 className="news-card__title">{cardDetails.item.title}</h2>
-            <p className="news-card__description">{cardDetails.item.desc[0].para1}+{cardDetails.item.desc[1].para2}+{cardDetails.item.desc[2].para3}</p>
+            <p className="news-card__description">{cardDetails.item.desc[0].para1}{cardDetails.item.desc[1].para2}{cardDetails.item.desc[2].para3}</p>
           </div>
         </div>
         <div className="par3">

@@ -23,7 +23,7 @@ const Sports = () => {
        <div className="par21">
          <div className="news-card__content">
            <h2 className="news-card__title">{val?.title}</h2>
-           <p className="news-card__description">{val?.description}+{val?.content}</p>
+           <p className="news-card__description">{val?.description}{val?.content}</p>
          </div>
        </div>
        <div className="par3">
