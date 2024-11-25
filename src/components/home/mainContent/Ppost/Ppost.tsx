@@ -1,12 +1,13 @@
 import React from "react"
 import Slider from "react-slick"
-import { lifestyle, popular, ppost } from "../../../../dummyData"
+import { popular} from "../../../../dummyData"
 import Heading from "../../../common/heading/Heading"
 import "./ppost.css"
 
 // copy same code of popular
 
-const data= "";
+const data=await popular("games");
+
 const Ppost = () => {
   const settings = {
     dots: false,
@@ -22,6 +23,7 @@ const Ppost = () => {
         <div className='content'>
           <Slider {...settings}>
             {data?.data?.articles?.map((val) => {
+               if(val.title!=="[Removed]"&&val.description!=="[Removed]"&&val.urlToImage!==null){
               return (
                 <div className='items'>
                   <div className='box shadow'>
@@ -43,6 +45,7 @@ const Ppost = () => {
                   </div>
                 </div>
               )
+            }
             })}
           </Slider>
         </div>

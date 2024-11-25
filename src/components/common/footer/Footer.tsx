@@ -54,13 +54,13 @@ const Footer = () => {
             <h3>Designed by:</h3>
             <ul>
               <li>
-                John Doe - <a href="mailto:john.doe@example.com">john.doe@example.com</a>
+                Piyush Rathwe - <a href="piyush30rathwe@gmail.com">piyush30rathwe@gmail.com</a>
               </li>
               <li>
-                Jane Smith - <a href="mailto:jane.smith@example.com">jane.smith@example.com</a>
+                Souhard Singh - <a href="mailto:jane.smith@example.com">jane.smith@example.com</a>
               </li>
               <li>
-                Alex Brown - <a href="mailto:alex.brown@example.com">alex.brown@example.com</a>
+                Shivansh Pathak - <a href="shivanshpathak64@gmail.com">shivanshpathak64@gmail.com</a>
               </li>
             </ul>
           </div>

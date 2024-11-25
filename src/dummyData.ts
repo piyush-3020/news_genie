@@ -3,144 +3,155 @@ import axios from "axios"
 export const hero = [
   {
     id: 1,
-    cover: "../images/hero/hero1.jpg",
-    catgeory: "featured",
-    title: "Google To Boost Android Security In Few Days",
-    authorName: "Salman",
-    authorImg: "../images/author.jpg",
-    time: "5 Jun - 2022",
+    cover: "https://cdn.mos.cms.futurecdn.net/4yyMKHJ9m77obrax9Rdfkh.jpg",
+    category: "featured",
+    title: "AI Breakthrough: OpenAI Announces GPT-5 Launch",
+    authorName: "Times of India",
+    authorImg: "../images/author2.jpg",
+    time: "26 Nov - 2024",
     desc: [
       {
-        para1: "You audience. Least, the recently his repeat the this avarice for the have and was on would before the concise bedding were hall politely name be regretting have of even five of it the his are there again. Word seven designer far lady problem will have work with you to fully understand your business to achieve.",
+        para1: "OpenAI has officially unveiled GPT-5, their latest and most advanced language model to date. This new iteration boasts enhanced reasoning, better contextual understanding, and a remarkable ability to generate human-like responses. Industry experts are hailing it as a leap forward in artificial intelligence, promising significant applications across various domains.",
       },
       {
-        para2: "We work with clients big and small across a range of sectors and we utilize all forms of media to get your name out there in a way that’s right for you. We believe that analysis of your company and your customers is key in responding effectively to your promotional needs and we will work with you.",
+        para2: "The launch event highlighted GPT-5's potential to revolutionize industries like healthcare, education, and creative content generation. ",
       },
       {
-        para3: "We have a number of different teams within our agency that specialise in different areas of business so you can be sure that you won’t receive a generic service and although we can’t boast years and years of service we can ensure you that is a good thing in this industry.",
+        para3: "",
       },
     ],
     details: [
       {
-        title: "Starting a new company is easy",
+        title: "Revolutionizing Industries with GPT-5",
       },
-      { para1: "Our teams are up to date with the latest technologies, media trends and are keen to prove themselves in this industry and that’s what you want from an advertising agency, not someone who is relying on the same way of doing things that worked 10 years, 5 years or even a year ago." },
-      {
-        quote: "Scarfs, still not this no with explains it me and option on the any options roasted when I and state can that an don't subjective of has his take on and in from royal everything took raising our have behind success you the mechanic.",
-      },
-      {
-        para2: "And, higher by agency; In from their in and we spirit, through merely and doctor's small him sounded a all now, with that put gift white highly geared that was left back as of or logged important. A over have the large try understanding the believe. Perfected been viewer. Shreds early willingly safely what passion the.",
+      { 
+        para1: "GPT-5 has been designed to adapt and learn more effectively than its predecessors. By leveraging a significantly larger dataset and an updated architecture, the model can perform complex tasks with enhanced accuracy. From automating mundane tasks to assisting professionals in decision-making, its applications are vast and transformative." 
       },
       {
-        para3: "In an ideal world this website wouldn’t exist, a client would acknowledge the importance of having web copy before the design starts. Needless to say it’s very important, content is king and people are beginning to understand that. However, back over in reality some project schedules and budgets don’t allow for web copy to be written before the design phase, this is sad but true.",
+        quote: "",
+      },
+      {
+        para2: "OpenAI has partnered with several organizations to implement GPT-5 in real-world scenarios.",
+      },
+      {
+        para3: "",
       },
     ],
-  },
-  {
-    id: 2,
-    cover: "../images/hero/hero2.jpg",
-    catgeory: "sport",
-    title: "More than billion football fans attend Brazil world cup",
-    authorName: "alex",
-    authorImg: "../images/author.jpg",
-    time: "12 Aug - 2022",
-    desc: [
-      {
-        para1: "You audience. Least, the recently his repeat the this avarice for the have and was on would before the concise bedding were hall politely name be regretting have of even five of it the his are there again. Word seven designer far lady problem will have work with you to fully understand your business to achieve.",
-      },
-      {
-        para2: "We work with clients big and small across a range of sectors and we utilize all forms of media to get your name out there in a way that’s right for you. We believe that analysis of your company and your customers is key in responding effectively to your promotional needs and we will work with you.",
-      },
-      {
-        para3: "We have a number of different teams within our agency that specialise in different areas of business so you can be sure that you won’t receive a generic service and although we can’t boast years and years of service we can ensure you that is a good thing in this industry.",
-      },
-    ],
-    details: [
-      {
-        title: "Starting a new company is easy",
-      },
-      { para1: "Our teams are up to date with the latest technologies, media trends and are keen to prove themselves in this industry and that’s what you want from an advertising agency, not someone who is relying on the same way of doing things that worked 10 years, 5 years or even a year ago." },
-      {
-        quote: "Scarfs, still not this no with explains it me and option on the any options roasted when I and state can that an don't subjective of has his take on and in from royal everything took raising our have behind success you the mechanic.",
-      },
-      {
-        para2: "And, higher by agency; In from their in and we spirit, through merely and doctor's small him sounded a all now, with that put gift white highly geared that was left back as of or logged important. A over have the large try understanding the believe. Perfected been viewer. Shreds early willingly safely what passion the.",
-      },
-      {
-        para3: "In an ideal world this website wouldn’t exist, a client would acknowledge the importance of having web copy before the design starts. Needless to say it’s very important, content is king and people are beginning to understand that. However, back over in reality some project schedules and budgets don’t allow for web copy to be written before the design phase, this is sad but true.",
-      },
-    ],
-  },
+},
+{
+  id: 2,
+  cover: "https://english.cdn.zeenews.com/sites/default/files/styles/zm_700x400/public/2024/11/25/1589185-sambhal.png?im=Resize=(1280,720)",
+  category: "politics",
+  title: "Sambhal Violence Sparks Controversy in Uttar Pradesh",
+  authorName: "Zee News",
+  authorImg: "../images/author7.jpg",
+  time: "26 Nov - 2024",
+  desc: [
+    {
+      para1: "The city of Sambhal in Uttar Pradesh witnessed communal violence following protests over a survey of a Mughal-era mosque. Several incidents of violence have been reported, prompting law enforcement to file seven FIRs.",
+    },
+    {
+      para2: "Samajwadi Party leader Akhilesh Yadav has accused the state government of instigating riots to divert attention from governance failures. He urged for a fair investigation into the incidents.",
+    },
+    {
+      para3: "",
+    },
+  ],
+  details: [
+    {
+      title: "A Rising Need for Harmony",
+    },
+    { 
+      para1: "Local authorities have launched inquiries into the root causes of the violence, while community leaders call for peace and dialogue to resolve disputes amicably." 
+    },
+    {
+      quote: "Riots harm the very fabric of society; we must work together to restore trust and unity.",
+    },
+    {
+      para2: "This incident highlights the importance of proactive governance and community engagement to prevent conflicts from spiraling out of control.",
+    },
+    {
+      para3: "The situation in Sambhal serves as a reminder of the delicate balance between heritage conservation and community sensitivities.",
+    },
+  ],
+}
+,
   {
     id: 3,
-    cover: "../images/hero/hero3.jpg",
-    catgeory: "fashion",
-    title: "No escaping new high tech speed cameras",
-    authorName: "rina",
-    authorImg: "../images/author.jpg",
-    time: "22 Mar - 2022",
+    cover: "https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2024/11/befunky-collage-2-2024-11-22t141621-1732265152.jpg",
+    category: "national",
+    title: "Supreme Court Reviews Delhi-NCR Air Pollution Situation",
+    authorName: "NDTV",
+    authorImg: "../images/author6.jpg",
+    time: "26 Nov - 2024",
     desc: [
       {
-        para1: "You audience. Least, the recently his repeat the this avarice for the have and was on would before the concise bedding were hall politely name be regretting have of even five of it the his are there again. Word seven designer far lady problem will have work with you to fully understand your business to achieve.",
+        para1: "The Supreme Court of India has suggested that the Commission for Air Quality Management (CAQM) consider reopening schools and colleges in Delhi-NCR if air quality conditions improve. This comes as the national capital battles severe air pollution during winter.",
       },
       {
-        para2: "We work with clients big and small across a range of sectors and we utilize all forms of media to get your name out there in a way that’s right for you. We believe that analysis of your company and your customers is key in responding effectively to your promotional needs and we will work with you.",
+        para2: "The Court emphasized the importance of ensuring the safety of children and students while balancing the need for uninterrupted education. A review of the Air Quality Index (AQI) is expected in the coming days.",
       },
       {
-        para3: "We have a number of different teams within our agency that specialise in different areas of business so you can be sure that you won’t receive a generic service and although we can’t boast years and years of service we can ensure you that is a good thing in this industry.",
+        para3: "",
       },
     ],
     details: [
       {
-        title: "Starting a new company is easy",
+        title: "Balancing Health and Education",
       },
-      { para1: "Our teams are up to date with the latest technologies, media trends and are keen to prove themselves in this industry and that’s what you want from an advertising agency, not someone who is relying on the same way of doing things that worked 10 years, 5 years or even a year ago." },
-      {
-        quote: "Scarfs, still not this no with explains it me and option on the any options roasted when I and state can that an don't subjective of has his take on and in from royal everything took raising our have behind success you the mechanic.",
-      },
-      {
-        para2: "And, higher by agency; In from their in and we spirit, through merely and doctor's small him sounded a all now, with that put gift white highly geared that was left back as of or logged important. A over have the large try understanding the believe. Perfected been viewer. Shreds early willingly safely what passion the.",
+      { 
+        para1: "Air pollution in Delhi-NCR peaks during winter months due to stubble burning, vehicular emissions, and construction activities. The CAQM and local authorities are working on strategies to improve air quality while minimizing disruptions to daily life." 
       },
       {
-        para3: "In an ideal world this website wouldn’t exist, a client would acknowledge the importance of having web copy before the design starts. Needless to say it’s very important, content is king and people are beginning to understand that. However, back over in reality some project schedules and budgets don’t allow for web copy to be written before the design phase, this is sad but true.",
+        quote: "Air quality is a fundamental right; steps must be taken to ensure a safe environment for all citizens.",
+      },
+      {
+        para2: "Public health experts have highlighted the urgent need for sustainable solutions, including promoting green energy and reducing dependency on fossil fuels.",
+      },
+      {
+        para3: "The Supreme Court's intervention reflects the gravity of the situation and the need for coordinated action across governmental levels.",
       },
     ],
-  },
-  {
-    id: 4,
-    cover: "../images/hero/hero4.jpg",
-    catgeory: "technology",
-    title: "Emma Watson stands up for Turkish women",
-    authorName: "sunil",
-    authorImg: "../images/author.jpg",
-    time: "08 Dec - 2022",
-    desc: [
-      {
-        para1: "You audience. Least, the recently his repeat the this avarice for the have and was on would before the concise bedding were hall politely name be regretting have of even five of it the his are there again. Word seven designer far lady problem will have work with you to fully understand your business to achieve.",
-      },
-      {
-        para2: "We work with clients big and small across a range of sectors and we utilize all forms of media to get your name out there in a way that’s right for you. We believe that analysis of your company and your customers is key in responding effectively to your promotional needs and we will work with you.",
-      },
-      {
-        para3: "We have a number of different teams within our agency that specialise in different areas of business so you can be sure that you won’t receive a generic service and although we can’t boast years and years of service we can ensure you that is a good thing in this industry.",
-      },
-    ],
-    details: [
-      {
-        title: "Starting a new company is easy",
-      },
-      { para1: "Our teams are up to date with the latest technologies, media trends and are keen to prove themselves in this industry and that’s what you want from an advertising agency, not someone who is relying on the same way of doing things that worked 10 years, 5 years or even a year ago." },
-      {
-        quote: "Scarfs, still not this no with explains it me and option on the any options roasted when I and state can that an don't subjective of has his take on and in from royal everything took raising our have behind success you the mechanic.",
-      },
-      {
-        para2: "And, higher by agency; In from their in and we spirit, through merely and doctor's small him sounded a all now, with that put gift white highly geared that was left back as of or logged important. A over have the large try understanding the believe. Perfected been viewer. Shreds early willingly safely what passion the.",
-      },
-      {
-        para3: "In an ideal world this website wouldn’t exist, a client would acknowledge the importance of having web copy before the design starts. Needless to say it’s very important, content is king and people are beginning to understand that. However, back over in reality some project schedules and budgets don’t allow for web copy to be written before the design phase, this is sad but true.",
-      },
-    ],
-  },
+}
+,
+{
+  id: 4,
+  cover: "https://img.manoramayearbook.in/content/dam/yearbook/learn/current-affairs/india/images/2024/11/11/austrahind.jpg",
+  category: "international",
+  title: "India and Australia Conduct AUSTRAHIND Military Drills",
+  authorName: "Hindustan Times",
+  authorImg: "../images/author8.jpg",
+  time: "26 Nov - 2024",
+  desc: [
+    {
+      para1: "The bilateral military exercise 'AUSTRAHIND' between India and Australia has commenced, aiming to enhance interoperability and strengthen strategic ties between the two nations' armed forces.",
+    },
+    {
+      para2: "The exercise involves joint training on counter-terrorism operations, humanitarian assistance, and disaster relief missions. It reflects the growing defense collaboration in the Indo-Pacific region.",
+    },
+    {
+      para3: "",
+    },
+  ],
+  details: [
+    {
+      title: "Strengthening Strategic Partnerships",
+    },
+    { 
+      para1: "Both countries emphasized the importance of shared values and the need to address global challenges together, particularly in ensuring maritime security and countering terrorism." 
+    },
+    {
+      quote: "Our partnership with Australia reflects our shared commitment to peace and security in the Indo-Pacific region.",
+    },
+    {
+      para2: "The exercise is part of a series of initiatives to bolster defense ties and showcases the mutual determination to address evolving security dynamics.",
+    },
+    {
+      para3: "AUSTRAHIND is expected to lay the groundwork for more advanced collaborations in the future, focusing on technological innovations and cyber defense.",
+    },
+  ],
+}
+,
 ]
 export const world = [
   {
@@ -158,8 +169,7 @@ export const world = [
     title: "Renewable energy dead as industry waits for Policy ",
     authorName: "Salman",
     time: "5 Jun - 2022",
-    desct: "If rather, him the would treble-range wild any long of policy waved preparations disguised first initial that commitment had my in for spirits gradual solitary I for his absolutely with it and I to unable follow the to as every it the control and a of thinks the what's help days, with and paint, series at window and could we've offer, hard with king either written dry be are of princesses. We’re here to help, we’ve written examples of web copy for over 40 industries for you to use at concept phase of your projects to bring a little life and realism to your designs and help you think about who and what you are designing for. We want clients and designers alike to think about their design and how it will work with the web copy, we want you think about how numbers, symbols and bullet points will look. Sure, it's easier to just run down the forms and fill the fields with garbage in order to plow through them quickly. But that's not real. That's not what your customers are going to do. Is it really smart to take a shortcut when customers are forced to take the long road? When you just enter fake copy in rapid-fire fashion, you don't know what it really feels like to fill out that form. Do as your customers do and you'll understand them better. When you understand them better, and feel what they feel, you'll build a better interface.",
-    descb: "We work with clients big and small across a range of sectors and we utilise all forms of media to get your name out there in a way that’s right for you. We believe that analysis of your company and your customers is key in responding effectively to your promotional needs and we will work with you to fully understand your business to achieve the greatest amount of publicity possible so that you can see a return from the advertising. We have a number of different teams within our agency that specialise in different areas of business so you can be sure that you won’t receive a generic service and although we can’t boast years and years of service we can ensure you that is a good thing in this industry. Our teams are up to date with the latest technologies, media trends and are keen to prove themselves in this industry and that’s what you want from an advertising agency, not someone who is relying on the same way of doing things that worked 10 years, 5 years or even a year ago. Scarfs, still not this no with explains it me and option on the any options roasted when I and state can that an don't subjective of has his take on and in from royal everything took raising our have behind success you the mechanic. And, higher by agency; In from their in and we spirit, through merely and doctor's small him sounded a all now, with that put gift white highly geared that was left back as of or logged important. A over have the large try understanding the believe. Perfected been viewer. Shreds early willingly safely what passion the. We offer a range of training packages in a range of subject areas and can offer blended learning opportunities to best meet your needs. If sitting in a room with a trainer and having the opportunity for discussion with other learners sounds good to you then we can offer this. If you have enough people wanting to attend the same course then we can run one just for you. If you prefer to study in your own time and at your own speed then one of our e learning packages may be right up your street. There is a third option, which is you like the sound of both but perhaps can’t attend all training sessions, this is when blended learning comes into its own. We work with clients big and small across a range of sectors and we utilise all forms of media to get your name out there in a way that’s right for you. We believe that analysis of your company and your customers is key in responding effectively to your promotional needs and we will work with you to fully understand your business to achieve the greatest amount of publicity possible so that you can see a return from the advertising. We have a number of different teams within our agency that specialise in different areas of business so you can be sure that you won’t receive a generic service and although we can’t boast years and years of service we can ensure you that is a good thing in this industry. Our teams are up to date with the latest technologies, media trends and are keen to prove themselves in this industry. We work with clients big and small across a range of sectors and we utilise all forms of media to get your name out there in a way that’s right for you. We believe that analysis of your company and your customers is key in responding effectively to your promotional needs and we will work with you to fully understand your business to achieve the greatest amount of publicity possible so that you can see a return from the advertising.",
+    desct: "",
   },
   {
     id: 3,
@@ -189,6 +199,8 @@ export const world = [
 
 const keyy = import.meta.env.VITE_API_KEYY;
 const keyy2 = import.meta.env.VITE_API_KEYY2;
+const keyy3 = import.meta.env.VITE_API_KEYY3;
+const keyy4 = import.meta.env.VITE_API_KEYY4;
 
 export const popular = async (query: string)=>{
   const url=`https://newsapi.org/v2/everything?q=${query}&apiKey=${keyy}&pageSize=20`
@@ -199,6 +211,20 @@ export const popular = async (query: string)=>{
 
 export const lifestyle = async (query: string)=>{
   const url=`https://newsapi.org/v2/everything?q=${query}&apiKey=${keyy2}&pageSize=20`
+  const lifestyledata=await axios.get(url);
+
+  return lifestyledata;
+}
+
+export const sport = async (query: string)=>{
+  const url=`https://newsapi.org/v2/everything?q=${query}&apiKey=${keyy3}&pageSize=20`
+  const populardata=await axios.get(url);
+
+  return populardata;
+}
+
+export const info = async (query: string)=>{
+  const url=`https://newsapi.org/v2/everything?q=${query}&apiKey=${keyy4}&pageSize=20`
   const lifestyledata=await axios.get(url);
 
   return lifestyledata;

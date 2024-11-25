@@ -2,9 +2,9 @@ import React from "react"
 import "./music.css"
 import Slider from "react-slick"
 import Heading from "../../../common/heading/Heading"
-import { popular } from "../../../../dummyData"
+import { lifestyle } from "../../../../dummyData"
 
-const data= "";
+const data=await lifestyle("music");
 
 
 const Music = () => {
@@ -25,6 +25,7 @@ const Music = () => {
         <div className='content'>
           <Slider {...settings}>
             {data?.data?.articles?.map((val: { cover: string | undefined; catgeory: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | null | undefined; title: string | any[]; date: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | null | undefined; desc: string | any[]; comments: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | null | undefined }) => {
+               if(val.title!=="[Removed]"&&val.description!=="[Removed]"&&val.urlToImage!==null){
                 return (
                   <div className='items'>
                     <div className='box shadow flexSB'>
@@ -53,6 +54,7 @@ const Music = () => {
                     </div>
                   </div>
                 )
+              }
               })}
           </Slider>
         </div>

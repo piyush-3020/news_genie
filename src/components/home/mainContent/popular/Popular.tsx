@@ -4,10 +4,10 @@ import "./Popular.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { popular } from "../../../../dummyData";
+import { lifestyle } from "../../../../dummyData";
 import Heading from "../../../common/heading/Heading";
 
-const data = "";
+const data=await lifestyle("popular");
 
 const Popular = () => {
   const settings = {
@@ -80,6 +80,7 @@ const Popular = () => {
                 },
                 index
               ) => {
+                if(val.title!=="[Removed]"&&val.description!=="[Removed]"&&val.urlToImage!==null){
                 return (
                   <div className="items" key={index}>
                     <div className="box shadow">
@@ -111,6 +112,7 @@ const Popular = () => {
                     </div>
                   </div>
                 );
+              }
               }
             )}
           </Slider>

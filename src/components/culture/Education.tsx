@@ -1,14 +1,15 @@
 import "./NewsCard.css";
 import SentimentChart from "../card/sentiment/analysis";
 import Comments from "../card/comments/comment";
-import { lifestyle } from "../../dummyData";
+import { info } from "../../dummyData";
 
 
-const data="";
+const data=await info("education");
 const Education = () => {
   return (
     <>
     {data?.data?.articles?.map((val: { cover: string | undefined; catgeory: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | null | undefined; title: string | any[]; date: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | null | undefined }) => {
+       if(val.title!=="[Removed]"&&val.description!=="[Removed]"&&val.urlToImage!==null){
               return (
                <>
                <div className={`news-card `}>
@@ -31,7 +32,7 @@ const Education = () => {
         </div>
         <div className="par22">
           <div className="sentiment">
-            <SentimentChart />
+          <SentimentChart description={val?.description+val?.content} />
           </div>
           <div className="comment">
             <Comments />
@@ -41,6 +42,7 @@ const Education = () => {
     </div>
                </>
               )
+            }
             })}
     
     </>
