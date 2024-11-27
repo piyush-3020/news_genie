@@ -1,4 +1,4 @@
-import React from "react";
+
 import { tpost } from "../../../../dummyData";
 import Heading from "../../../common/heading/Heading";
 import "./tpost.css";

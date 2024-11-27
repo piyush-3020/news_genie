@@ -1,34 +1,50 @@
+// import { useNavigate } from "react-router-dom";
 
-import { Link, useNavigate } from "react-router-dom"
-
-const Card = ({ item: { id, cover, catgeory, title, authorName, time,desc } }) => {
-  const navigate = useNavigate();
-const handleclick=(item)=>{
-  console.log(item)
- navigate('/OneCard',{ state: { cardDetails: item } })
-
+interface CardItem {
+  id: string | number;
+  cover: string;
+  catgeory: string;
+  title: string;
+  authorName: string;
+  time: string;
+  desc: { para1?: string; para2?: string; para3?: string }[];
 }
+
+// Define the CardProps type
+interface CardProps {
+  item: CardItem;
+}
+
+const Card: React.FC<CardProps> = ({ item }) => {  // Destructure the item here
+  // const navigate = useNavigate();
+  
+  // const handleclick = (item: CardItem) => {
+  //   navigate("/OneCard", { state: { cardDetails: item } });
+  // };
+
   return (
     <>
-      <div className='box'>
-        <div className='img'>
-          <img src={cover} alt='' />
+      <div className="box">
+        <div className="img">
+          <img src={item.cover} alt="" />
         </div>
-        <div className='text'>
-          <span className='category'>{catgeory}</span>
-          {/*<h1 className='titleBg'>{title}</h1>*/}
-            
-            <h1 className='titleBg' onClick={()=>handleclick({item: { id, cover, catgeory, title, authorName, time,desc }})}>{title} </h1>
-           
-          
-          <div className='author flex' >
-            <span>by {authorName}</span>
-            <span>{time}</span>
+        <div className="text">
+          <span className="category">{item.catgeory}</span>
+          <h1
+            className="titleBg"
+            // onClick={() => handleclick(item)}
+          >
+            {item.title}
+          </h1>
+
+          <div className="author flex">
+            <span>by {item.authorName}</span>
+            <span>{item.time}</span>
           </div>
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;

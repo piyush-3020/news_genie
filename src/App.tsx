@@ -22,6 +22,17 @@ import Health from "./components/culture/Health.js";
 import { useEffect, useState } from "react";
 import OneCard from "./components/home/hero/OneCard.js";
 
+declare global {
+  interface Window {
+    google: {
+      translate: {
+        TranslateElement: new (options: { pageLanguage: string }, elementId: string) => void;
+      };
+    };
+    googleTranslateElementInit: () => void;
+  }
+}
+
 const App = () => {
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -31,29 +42,34 @@ const App = () => {
   };
 
   useEffect(() => {
-    const addGoogleTranslateScript = () => {
-      const script = document.createElement("script");
-      script.type = "text/javascript";
-      script.src =
-        "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-      script.async = true;
-      document.body.appendChild(script);
-
-      window.googleTranslateElementInit = () => {
-        new window.google.translate.TranslateElement(
-          { pageLanguage: "en" },
-          "google_element"
-        );
-      };
+    // Declare the callback function on the window object
+    window.googleTranslateElementInit = () => {
+      new window.google.translate.TranslateElement(
+        { pageLanguage: "en" },
+        "google_element"
+      );
     };
-
-    // Ensure script is added only once
-    if (!window.googleTranslateElementInit) {
+    
+  
+    const addGoogleTranslateScript = () => {
+      if (!document.getElementById("google-translate-script")) {
+        const script = document.createElement("script");
+        script.id = "google-translate-script";
+        script.type = "text/javascript";
+        script.src =
+          "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+        script.async = true;
+        document.body.appendChild(script);
+      }
+    };
+  
+    if (!window.google || !window.google.translate) {
       addGoogleTranslateScript();
-    } else if (window.google && window.google.translate) {
-      window.google.translate.TranslateElement({ pageLanguage: "en" }, "google_element");
+    } else {
+      window.googleTranslateElementInit();
     }
   }, []);
+  
 
   return (
     <>
@@ -62,7 +78,7 @@ const App = () => {
         <Dates />
         <Link to="/" onClick={handleClick}>
       <div className={`logo ${isAnimating ? "animate" : ""}`}>
-        <img src="/src/logo1.png" alt="Logo" />
+        <img src="../public/images/logo1.png" alt="Logo" />
       </div>
     </Link>
           

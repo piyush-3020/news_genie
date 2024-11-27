@@ -1,20 +1,47 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { hero } from "../../dummyData";
+import { hero } from "../../dummyData"; // Ensure 'hero' is properly typed
 import Side from "../home/sideContent/side/Side";
 import SinglePageSlider from "./slider/SinglePageSlider";
 import "../home/mainContent/homes/style.css";
 import "./singlepage.css";
 import "../home/sideContent/side/side.css";
 
+// Define Types
+interface Description {
+  para1?: string;
+  para2?: string;
+  para3?: string;
+}
+
+interface Detail {
+  title?: string;
+  para1?: string;
+  para2?: string;
+  para3?: string;
+  quote?: string;
+}
+
+interface NewsItem {
+  id: number;
+  cover: string;
+  catgeory: string;
+  title: string;
+  authorName: string;
+  authorImg: string;
+  time: string;
+  desc: Description[];
+  details: Detail[];
+}
+
 const SinglePage = () => {
   const { id } = useParams();
-  const [item, setItem] = useState(null);
-  const [comments, setComments] = useState([]); // State for comments
+  const [item, setItem] = useState<NewsItem | null>(null);
+  const [comments, setComments] = useState<{ text: string; date: string }[]>([]); // State for comments
   const [newComment, setNewComment] = useState(""); // State for input field
 
   useEffect(() => {
-    const newsItem = hero.find((item) => item.id === parseInt(id));
+    const newsItem = hero.find((item) => item.id === parseInt(id || ""));
     if (newsItem) {
       setItem(newsItem);
       document.title = newsItem.title;
@@ -25,7 +52,7 @@ const SinglePage = () => {
     window.scrollTo(0, 0);
   }, [id]);
 
-  const handleCommentSubmit = (e) => {
+  const handleCommentSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (newComment.trim()) {
       setComments([...comments, { text: newComment, date: new Date().toLocaleString() }]);
@@ -45,20 +72,23 @@ const SinglePage = () => {
 
   const description = item.desc.map((val, index) => (
     <div key={index}>
-      <p>{val.para1}</p>
-      <p>{val.para2}</p>
+      {val.para1 && <p>{val.para1}</p>}
+      {val.para2 && <p>{val.para2}</p>}
+      {val.para3 && <p>{val.para3}</p>}
     </div>
   ));
 
   const details = item.details.map((data, index) => (
     <div key={index}>
-      <h1>{data.title}</h1>
-      <p>{data.para1}</p>
-      <blockquote>
-        <i className="fa fa-quote-left"></i> {data.quote}
-      </blockquote>
-      <p>{data.para2}</p>
-      <p>{data.para3}</p>
+      {data.title && <h1>{data.title}</h1>}
+      {data.para1 && <p>{data.para1}</p>}
+      {data.quote && (
+        <blockquote>
+          <i className="fa fa-quote-left"></i> {data.quote}
+        </blockquote>
+      )}
+      {data.para2 && <p>{data.para2}</p>}
+      {data.para3 && <p>{data.para3}</p>}
     </div>
   ));
 
@@ -72,7 +102,7 @@ const SinglePage = () => {
           <div className="author">
             <span>by</span>
             <img src={item.authorImg} alt={item.authorName} />
-            <p> {item.authorName} on</p>
+            <p>{item.authorName} on</p>
             <label>{item.time}</label>
           </div>
 
